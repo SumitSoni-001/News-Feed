@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Toolbar_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/newsicon"
+                android:padding="5dp"
+                android:src="@drawable/news_icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/adamina"
+                android:padding="5dp"
+                android:text="@string/title"
+                android:textAllCaps="true"
+                android:textColor="@color/Toolbar_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- 'Thumb' is the circle on ends of switch.    -->
+            <!-- 'Track' is the area above which track is placed.   -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:padding="10dp"
+                android:thumb="@drawable/switch_thumb_selector"
+                app:track="@drawable/switch_track_selector" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/toolbar"
+        android:background="@color/Tab_bg"
+        app:tabIndicatorColor="@color/textColor"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+        app:tabGravity="start"
+        app:tabSelectedTextColor="@color/textColor"
+        app:tabTextColor="@color/Toolbar_text" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout" />
+
+</RelativeLayout>
