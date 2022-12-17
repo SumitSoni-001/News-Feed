@@ -1,5 +1,6 @@
 # News-Feed
-News feed📰 is an API based app that provide you latest news of different categories.
+
+News feed📰 is a news app in which latest news is fetched from publicly hosted API's via Retrofit, that provide latest news of different categories.
 
 API :- https://newsapi.org/
 
